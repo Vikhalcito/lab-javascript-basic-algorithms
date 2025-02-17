@@ -18,13 +18,20 @@ if (hacker1.length > hacker2.length) {
 // Iteration 3: Loops
 
 //3.1
-let nameArr = hacker1.toUpperCase().split('')
+let nameArr = hacker1.toUpperCase()
 let nameUpperCase = ''
 
 for(i=0; i<nameArr.length; i++){
-    nameUpperCase += ` ${nameArr[i]}`
+   if(i<nameArr.length - 1) {
+    nameUpperCase += `${nameArr[i]} `
+   } else {
+    nameUpperCase += `${nameArr[i]}`
+   }
+    
 }
-console.log(nameUpperCase)
+
+console.log(nameUpperCase.length)
+
 
 //3.2
 let reverseName = ""
@@ -50,4 +57,29 @@ if(arr[0] === hacker1 && arr[0] !== hacker2) {
     console.log("Yo, the navigator goes first, definitely.")
 } else {
     console.log("What?! You both have the same name?")
+} 
+
+//4.1 (bonus)
+let longText ="Integer commodo libero a est malesuada tempor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras aliquet, sapien at tempus porta, purus sem vestibulum nisl, id posuere magna ex sit amet ligula. Mauris aliquet mattis nulla eget blandit. Donec venenatis ut arcu id vulputate. Curabitur auctor odio quis diam auctor, ut auctor elit viverra. Vestibulum faucibus neque a imperdiet efficitur. Etiam turpis mauris, tempus at suscipit ut, finibus id diam. Integer ut suscipit justo, sed vestibulum tortor. Aliquam at blandit orci. Integer nisi tortor, condimentum nec eros at, gravida rhoncus ante. Sed molestie metus a turpis finibus, id maximus tellus imperdiet. Morbi hendrerit aliquet est, nec molestie erat finibus ut. Duis in justo eu felis congue faucibus lobortis nec justo. Aenean ultrices sapien tortor, at finibus ipsum congue quis."
+
+let numberOfSpaces = 0
+
+for(i=0; i<longText.length; i++){
+    if( longText[i]=== " "){
+        numberOfSpaces++
+    }
 }
+
+let numberOfWords = numberOfSpaces + 1
+console.log(numberOfWords)
+
+//4.2
+let numberOfEts = 0
+for(i=0; i<longText.length; i++){
+    if( longText[i]=== "e" && longText[i + 1] ==="t"){
+        numberOfEts ++
+    }
+}
+
+console.log(numberOfEts)
+// console.log(longText)
